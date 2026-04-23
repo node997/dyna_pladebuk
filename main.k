@@ -250,6 +250,7 @@ $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
 *SECTION_SOLID
 $#   secid    elform       aet    unused    unused    unused    cohoff   gaskeit
          1         2         0                                     0.0       0.0
+$# 2mm kvadratiske elementer
 *INCLUDE
 geometry.k
 *END
