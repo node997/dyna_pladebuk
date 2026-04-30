@@ -1,10 +1,11 @@
 $# LS-DYNA Keyword file created by LS-PrePost(R) 2024/R2(4.11.14)-25Feb2025
 $# Created on Apr-20-2026 (18:25:34)
+$# Copyright (c) 2026 node997
 $# https://github.com/node997/dyna_pladebuk
 *KEYWORD
 *TITLE
 $#                                                                         title
-LS-DYNA SIMULERING AF VARME DER BUKKER PLADE - J.G
+LS-DYNA SIMULERING AF VARME DER BUKKER PLADE - J. G
 *PARAMETER_DUPLICATION
 $#   dflag
          4
