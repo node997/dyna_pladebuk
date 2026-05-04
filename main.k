@@ -64,13 +64,6 @@ $#   iprtf    ierode   tet10s8    msgmax    ipcurv      gmdt   ip1dblt      eocs
 *CONTROL_PARALLEL
 $#    ncpu    numrhs     const      para                                  unused
          0         0         1         0
-*CONTROL_SHELL
-$#  wrpang     esort     irnxx    istupd    theory       bwc     miter      proj
-      20.0         1        -1         4         2         1         1         1
-$# rotascl    intgrd    lamsht    cstyp6    thshel    nfail1    nfail4   psnfail
-       0.0         0         0         0         0
-$# psstupd   sidt4tu     cntco    itsflg    irquad    w-mode   stretch      icrq
-         0         0         2         0         3       0.0       0.0         0
 *CONTROL_SOLID
 $#   esort   fmatrix   niptets    swlocl    psfail   t10jtol      icoh    tet13k
          1         2         4         1         0       0.0         0         0
@@ -162,7 +155,6 @@ $#     pid      ptyp     nsid1      spd1     nsid2      spd2      ncyc    relvel
          1         1        20       3.0      -569       0.0        10         0
 $#   iform      lcid         q     lcrot     lcmov     lclat      disc     enfor
          1      1010       1.2      1011      1012         0       2.0         0
-$         1      1010       1.6      1011      1012         0       2.0         0
 $#      p1        p2        p3        p4        p5        p6        p7        p8
       16.0       3.0      16.0      16.0       0.6       1.4       3.0       0.0
 *LOAD_BODY_Y
