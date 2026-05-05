@@ -123,11 +123,11 @@ $#                a1                  o1
               1473.0    2.0699999368e-05
               1773.0    2.1600000764e-05
               9773.0    2.1600000764e-05
-*DEFINE_CURVE_TITLE
-LCLAT
+$*DEFINE_CURVE_TITLE
+$LCLAT
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
-      1001         0       1.0       1.0       0.0       0.0         0         0
+$      1001         0       1.0       1.0       0.0       0.0         0         0
 $#                a1                  o1
-                 0.0                0.25
-              1000.0                0.25
+$                 0.0                0.25
+$              1000.0                0.25
 *END
