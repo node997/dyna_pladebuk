@@ -149,7 +149,7 @@ $#   iform   ibinary                                                      unused
 $#    ssid    pserod
     420420         0
 $#   hlcid     hmult     tlcid     tmult       loc
-      6969      0.02         0     293.0         0
+      6969      0.02         0     295.0         0
 *BOUNDARY_THERMAL_WELD_TRAJECTORY
 $#     pid      ptyp     nsid1      spd1     nsid2      spd2      ncyc    relvel
          1         1        20       3.0      -569       0.0        10         0
