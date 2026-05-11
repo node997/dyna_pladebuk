@@ -1,9 +1,4 @@
 **/iter_*/
-iter_01/
-iter_02/
-iter_03/
-iter_04/
-iter_05/
 *.d3plot
 *.binout
 *.tprint
