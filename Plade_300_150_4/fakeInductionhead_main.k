@@ -152,11 +152,45 @@ $#   hlcid     hmult     tlcid     tmult       loc
       6969      0.02         0     295.0         0
 *BOUNDARY_THERMAL_WELD_TRAJECTORY
 $#     pid      ptyp     nsid1      spd1     nsid2      spd2      ncyc    relvel
-         1         1        20       3.0      -569       0.0        10         0
+         1         1        20       4.0      -569       0.0        10         0
 $#   iform      lcid         q     lcrot     lcmov     lclat      disc     enfor
-         1      1010      0.80      1011      1012         0       2.0         0
-$#      p1        p2        p3        p4        p5        p6        p7        p8
-      16.0       3.0      16.0      16.0       0.6       1.4       3.0       0.0
+         5      1010      0.80      1011      1012         0       2.0         1
+$#      p1        p2
+      1.00      22.0
+$R_coil coil - ring radius [mm] - 32mm diameter ferrite
+$sigma_r - radial spread [mm] - tight due to focusing ferrite
+$sigma_t - in-plane lateral spread [mm]
+$delta_skin - skin depth [mm] - adjust for your material/frequency
+$radial - distance from coil center axis
+$dr - deviation from ring radius
+$q - Ring-shaped heat input, decaying exponentially with depth (skin effect)
+*DEFINE_FUNCTION
+1,DHI-45C induction ring source 32mm with edge boost
+float heat(float r, float s, float t, float time, float weldspd)
+{
+    float R_coil, sigma_r, sigma_t, radial, dr, q;
+    float t_start, t_end, boost_max, boost_sigma;
+    float boost_start, boost_end, edge_boost;
+    float ds, dt, dts, dte;
+    R_coil      = 16.0;
+    sigma_r     = 3.0;
+    sigma_t     = 2.5;
+    t_start     = 0.1;
+    t_end       = 37.7;
+    boost_max   = 2.5;
+    boost_sigma = 1.5;
+    radial = sqrt(r*r + s*s);
+    dr = radial - R_coil;
+    ds = dr*dr / (sigma_r*sigma_r);
+    dt = t*t / (sigma_t*sigma_t);
+    q = exp(-ds) * exp(-dt);
+    dts = (time-t_start) * (time-t_start) / (boost_sigma*boost_sigma);
+    dte = (time-t_end) * (time-t_end) / (boost_sigma*boost_sigma);
+    boost_start = (boost_max-1.0) * exp(-dts);
+    boost_end = (boost_max-1.0) * exp(-dte);
+    edge_boost = 1.0 + boost_start + boost_end;
+    return q * edge_boost;
+}
 *LOAD_BODY_Y
 $     lcid        sf    lciddr        xc        yc        zc       cid   unused1
 $#    lcid        sf    lciddr        xc        yc        zc       cid
