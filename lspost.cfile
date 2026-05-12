@@ -1,0 +1,24 @@
+$# LS-PrePost command file created by LS-PrePost(R) 2024/R2(4.11.14)-25Feb2025 -64bit-Linux
+$# Created on May-12-2026 (09:55:36)
+open keyword "/home/jakob/Dokumenter/Dyna/dyna1/dyna24/dynascripting/main.k"
+Message 1
+Message 0
+displayentity Set Node off all
+displayentity Set Node on 2
+displayentity Set Node off all
+displayentity Set Node on 20
+displayentity Set Segment off all
+displayentity Set Segment on 569
+displayentity Set Segment off all
+displayentity Set Segment off all
+displayentity Set Segment on 420420
+displayentity Set Segment off all
+displayentity Set Segment on 569
+displayentity Set Node off all
+displayentity Set Node on 2
+displayentity Set Node off all
+displayentity Set Node off all
+displayentity Set Node on 2
+setnode
+displayentity Set Segment off all
+displayentity Set Segment on 569

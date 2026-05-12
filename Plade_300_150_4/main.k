@@ -1,5 +1,5 @@
 $# LS-DYNA Keyword file created by LS-PrePost(R) 2024/R2(4.11.14)-25Feb2025
-$# Created on Apr-20-2026 (18:25:34)
+$# Created on May-12-2026 (10:09:36)
 $# Copyright (c) 2026 node997
 $# https://github.com/node997/dyna_pladebuk
 *KEYWORD
@@ -74,7 +74,7 @@ $#    soln       nlq     isnan     lcint     lcacc     ncdcf    nocopy      crvp
          2         0         0         0         0         1         0         0
 *CONTROL_TERMINATION
 $#  endtim    endcyc     dtmin    endeng    endmas     nosol              unused
-     120.0         0       0.0       0.0  100000.0         0
+     240.0         0       0.0       0.0  100000.0         0
 *CONTROL_THERMAL_NONLINEAR
 $#  refmax       tol       dcp    lumpbc    thlstl    nlthpr    phchpn    unused
        1001.00000E-4       0.5         0       0.1         0       0.0
@@ -141,7 +141,7 @@ $#   neiph     neips    maxint    strflg    sigflg    epsflg    rltflg    engflg
 $#  cmpflg    ieverp    beamip     dcomp      shge     stssz    n3thdt   ialemat
          0         0         0         1         1         1         2         0
 $# nintsld   pkp_sen      sclp     hydro     msscl     therm    intout    nodout
-         0         0       0.0         0         2         2                    
+         0         0       0.0         0         2         2
 *DATABASE_FORMAT
 $#   iform   ibinary                                                      unused
          0         0
@@ -152,11 +152,45 @@ $#   hlcid     hmult     tlcid     tmult       loc
       6969      0.02         0     295.0         0
 *BOUNDARY_THERMAL_WELD_TRAJECTORY
 $#     pid      ptyp     nsid1      spd1     nsid2      spd2      ncyc    relvel
-         1         1        20       3.0      -569       0.0        10         0
+         1         1        20       4.0      -569       0.0        10         0
 $#   iform      lcid         q     lcrot     lcmov     lclat      disc     enfor
-         1      1010      1.00      1011      1012         0       2.0         0
-$#      p1        p2        p3        p4        p5        p6        p7        p8
-      16.0       3.0      16.0      16.0       0.6       1.4       3.0       0.0
+         5      1010      0.80      1011      1012         0       2.0         0
+$#      p1        p2
+      1.00      22.0
+$R_coil coil - ring radius [mm] - 32mm diameter ferrite
+$sigma_r - radial spread [mm] - tight due to focusing ferrite
+$sigma_t - in-plane lateral spread [mm]
+$delta_skin - skin depth [mm] - adjust for your material/frequency
+$radial - distance from coil center axis
+$dr - deviation from ring radius
+$q - Ring-shaped heat input, decaying exponentially with depth (skin effect)
+*DEFINE_FUNCTION
+1,DHI-45C induction ring source 32mm with edge boost
+float heat(float r, float s, float t, float time, float weldspd)
+{
+    float R_coil, sigma_r, sigma_t, radial, dr, q;
+    float t_start, t_end, boost_max, boost_sigma;
+    float boost_start, boost_end, edge_boost;
+    float ds, dt, dts, dte;
+    R_coil      = 16.0;
+    sigma_r     = 3.0;
+    sigma_t     = 2.5;
+    t_start     = 0.1;
+    t_end       = 37.7;
+    boost_max   = 2.5;
+    boost_sigma = 1.5;
+    radial = sqrt(r*r + s*s);
+    dr = radial - R_coil;
+    ds = dr*dr / (sigma_r*sigma_r);
+    dt = t*t / (sigma_t*sigma_t);
+    q = exp(-ds) * exp(-dt);
+    dts = (time-t_start) * (time-t_start) / (boost_sigma*boost_sigma);
+    dte = (time-t_end) * (time-t_end) / (boost_sigma*boost_sigma);
+    boost_start = (boost_max-1.0) * exp(-dts);
+    boost_end = (boost_max-1.0) * exp(-dte);
+    edge_boost = 1.0 + boost_start + boost_end;
+    return q * edge_boost;
+}
 *LOAD_BODY_Y
 $     lcid        sf    lciddr        xc        yc        zc       cid   unused1
 $#    lcid        sf    lciddr        xc        yc        zc       cid
@@ -174,11 +208,8 @@ $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
          3         0       0.0       0.0       0.0       0.0         0         0
 $#                a1                  o1
                  0.0             9806.65
-$                 a1                  o1                                 unused1
                  1.0             9806.65
-$                 a1                  o1                                 unused1
                 30.0             9806.65
-$                 a1                  o1                                 unused1
                300.0             9806.65
 *DEFINE_CURVE
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
@@ -187,7 +218,7 @@ $#                a1                  o1
                  0.0                 0.0
                  0.1                 1.0
                 20.0                 1.0
-                20.1                 0.0
+                30.1                 0.0
               1000.0                 0.0
 *DEFINE_CURVE_TITLE
 LCID - THERMAL WELD TRAJECTORY
@@ -195,9 +226,9 @@ $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
       1010         0       1.0       1.0       0.0       0.0         0         0
 $#                a1                  o1
                  0.0                 0.0
-                 0.2             1000000
-                33.3             1000000
-                33.4                 0.0
+                 0.1             1000000
+                37.7             1000000
+                37.8                 0.0
               1000.0                 0.0
 *DEFINE_CURVE_TITLE
 LROT - THERMAL WELD TRAJECTORY verification is needed !!!!
@@ -220,8 +251,8 @@ $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
 $#                a1                  o1
                  0.0                 0.1
                 50.0                 0.1
-                60.1                 0.5
-               120.0                 0.5
+                60.1                 0.1
+               200.0                 0.5
 *DEFINE_CURVE_TITLE
 AFKOLING - turns on cooling after xxx seconds
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
@@ -229,12 +260,12 @@ $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
 $#                a1                  o1
                  0.0                 0.0
                 50.0                 0.0
-                50.1                 1.0
+                60.1                 1.0
               1000.0                 1.0
 *INCLUDE
 boundary.k
 *INCLUDE
-MAT_CWM.k
+MAT_CWM355.k
 *PART
 $#                                                                         title
 Plade
@@ -243,7 +274,7 @@ $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
 *SECTION_SOLID
 $#   secid    elform       aet    unused    unused    unused    cohoff   gaskeit
          1         2         0                                     0.0       0.0
-$# 2mm kvadratiske elementer
+$# 4mm kvadratiske elementer paa plade der er 300x150x4mm
 *INCLUDE
 geometry.k
 *END
