@@ -152,7 +152,7 @@ $#   hlcid     hmult     tlcid     tmult       loc
       6969      0.02         0     295.0         0
 *BOUNDARY_THERMAL_WELD_TRAJECTORY
 $#     pid      ptyp     nsid1      spd1     nsid2      spd2      ncyc    relvel
-         1         1        20       3.0      -569       0.0        10         0
+         1         1        20       4.0      -569       0.0        10         0
 $#   iform      lcid         q     lcrot     lcmov     lclat      disc     enfor
          1      1010      0.80      1011      1012         0       2.0         0
 $#      p1        p2        p3        p4        p5        p6        p7        p8
