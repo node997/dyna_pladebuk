@@ -1,7 +1,7 @@
 #!/bin/bash
 # sti til ls dyna solver og ls prepost
-LSDYNA="/home/jakob/dyna/lsprepost4.12_common/local/dyna_d_wrapper.sh"
-LSPP="/home/jakob/dyna/lsprepost4.12_common/lspp412"
+LSDYNA="/home/ubuntu/local/dyna_d_wrapper.sh"
+LSPP="/home/ubuntu/dyna/lsprepost4.12_common/lspp412"
 # stien hvor simuleringer skal gemmes og hvor filer er placeret
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 # antal iterationer

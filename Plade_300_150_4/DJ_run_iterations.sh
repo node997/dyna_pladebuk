@@ -10,7 +10,7 @@ BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 # antal iterationer
 ITERATIONS=1
 # antal tråde simuleringen må spise
-NCPU=8
+NCPU=64
 
 echo "Kører fra: $BASE_DIR"
 echo ""
@@ -48,7 +48,7 @@ for i in $(seq 1 $ITERATIONS); do
     # Kør LS-DYNA ud fra main.k fil og med de ønskede antal kerner og med 200 mb ram
     cd "$ITER_DIR"
     echo "  Kører LS-DYNA..."
-    "$LSDYNA" i=main.k ncpu=$NCPU memory=20M
+    "$LSDYNA" i=main.k ncpu=$NCPU
 
     if [ $? -ne 0 ]; then
         echo "  ERROR: LS-DYNA fejlede – stopper"
