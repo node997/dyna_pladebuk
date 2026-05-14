@@ -13,7 +13,7 @@ trap "kill $XVFB_PID 2>/dev/null" EXIT
 # stien hvor simuleringer skal gemmes og hvor filer er placeret
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 # antal iterationer
-ITERATIONS=2
+ITERATIONS=5
 # antal tråde simuleringen må spise
 NCPU=64
 

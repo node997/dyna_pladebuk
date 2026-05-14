@@ -1,13 +1,21 @@
 #!/bin/bash
 # sti til ls dyna solver og ls prepost
-LSDYNA="/home/jakob/dyna/lsprepost4.12_common/local/dyna_d_wrapper.sh"
-LSPP="/home/jakob/dyna/lsprepost4.12_common/lspp412"
+#LSDYNA= "/home/jakob/dyna/lsprepost4.12_common/local/dyna_d_wrapper.sh"
+#LSPP= "/home/jakob/dyna/lsprepost4.12_common/lspp412"
+# sti til ls dyna solver og ls prepost
+LSDYNA="/home/ubuntu/local/dyna_d_wrapper.sh"
+LSPP="/home/ubuntu/dyna/lsprepost4.12_common/lspp412_mesa"
+export LD_LIBRARY_PATH=/home/ubuntu/dyna/lsprepost4.12_common/lsppLibs:$LD_LIBRARY_PATH
+Xvfb :99 -screen 0 1024x768x24 &
+XVFB_PID=$!
+export DISPLAY=:99
+trap "kill $XVFB_PID 2>/dev/null" EXIT
 # stien hvor simuleringer skal gemmes og hvor filer er placeret
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 # antal iterationer
-ITERATIONS=1
+ITERATIONS=5
 # antal tråde simuleringen må spise
-NCPU=1
+NCPU=64
 
 echo "Kører fra: $BASE_DIR"
 echo ""
@@ -45,7 +53,7 @@ for i in $(seq 1 $ITERATIONS); do
     # Kør LS-DYNA ud fra main.k fil og med de ønskede antal kerner og med 200 mb ram
     cd "$ITER_DIR"
     echo "  Kører LS-DYNA..."
-    "$LSDYNA" i=main.k ncpu=$NCPU memory=3M
+    "$LSDYNA" i=main.k ncpu=$NCPU
 
     if [ $? -ne 0 ]; then
         echo "  ERROR: LS-DYNA fejlede – stopper"
@@ -76,5 +84,5 @@ CEOF
     echo "  GREAT SUCCES: Iteration $i færdig"
     echo ""
 done
-
+kill $XVFB_PID
 echo "  ALLE $ITERATIONS ITERATIONER FÆRDIGE!"
