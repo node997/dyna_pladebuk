@@ -4,11 +4,16 @@
 #LSPP= "/home/jakob/dyna/lsprepost4.12_common/lspp412"
 # sti til ls dyna solver og ls prepost
 LSDYNA="/home/ubuntu/local/dyna_d_wrapper.sh"
-LSPP="/home/ubuntu/dyna/lsprepost4.12_common/lspp412"
+LSPP="/home/ubuntu/dyna/lsprepost4.12_common/lspp412_mesa"
+export LD_LIBRARY_PATH=/home/ubuntu/dyna/lsprepost4.12_common/lsppLibs:$LD_LIBRARY_PATH
+Xvfb :99 -screen 0 1024x768x24 &
+XVFB_PID=$!
+export DISPLAY=:99
+trap "kill $XVFB_PID 2>/dev/null" EXIT
 # stien hvor simuleringer skal gemmes og hvor filer er placeret
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 # antal iterationer
-ITERATIONS=1
+ITERATIONS=2
 # antal tråde simuleringen må spise
 NCPU=64
 
@@ -79,5 +84,5 @@ CEOF
     echo "  GREAT SUCCES: Iteration $i færdig"
     echo ""
 done
-
+kill $XVFB_PID
 echo "  ALLE $ITERATIONS ITERATIONER FÆRDIGE!"
