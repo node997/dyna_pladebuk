@@ -7,7 +7,7 @@ DIN_JAKOB_MODEL
 $#     mid        ro      lcem      lcpr      lcsy      lchr      lcat      beta
          17.8000E-09       411       412       413       414       415       0.0
 $# tastart     taend   tlstart     tlend    eghost    pghost    aghost
-    1331.0    1773.0-1.00000E8  -1000000   10000.0     0.2841.0000E-20
+    1331.0    1773.0-1.00000E8  -1000000   10000.0     0.284 1.000E-20
 $# t2phase   t1phase     anopt     postv
        0.0       0.0       0.0         0
 *MAT_THERMAL_CWM_TITLE
@@ -15,7 +15,7 @@ Plates_thermal
 $#    tmid       tro     tgrlc    tgmult     hdead     tdead      tlat      hlat
          1       0.0       0.0       0.0       0.0       0.0       0.0       0.0
 $#    lchc      lctc   tlstart     tlend   tistart     tiend    hghost    tghost
-       211       212   -1000.0   -1000.0       0.0       0.06.500000E8     0.001
+       211       212   -1000.0   -1000.0       0.0       0.0 6.50000E8     0.001
 *DEFINE_CURVE_TITLE
 LCHC - specific heat as function of temperature
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
