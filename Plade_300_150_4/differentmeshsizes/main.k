@@ -36,7 +36,7 @@ $#     ihq        qh
          6       0.1
 *CONTROL_IMPLICIT_AUTO
 $#   iauto    iteopt    itewin     dtmin     dtmax     dtexp     kfail    kcycle
-         1        11         5       0.0     -4441       0.0         0         0
+         1        11         5       0.0     -7441       0.0         0         0
 *CONTROL_IMPLICIT_GENERAL
 $#  imflag       dt0    imform      nsbs       igs     cnstn      form    zero_v
          1       0.1         2         1         1         0         0         0
@@ -88,7 +88,7 @@ $#      ts       tip       its      tmin      tmax     dtemp      tscp      lcts
          1       1.0       0.1     -7440     -7441     100.0      0.95      7442
 *CONTROL_TIMESTEP
 $#  dtinit    tssfac      isdo    tslimt     dt2ms      lctm     erode     ms1st
-       0.1       1.0         0       0.0       0.0      4441         0         0
+       0.1       1.0         0       0.0       0.0      7441         0         0
 $#  dt2msf   dt2mslc     imscl    unused    unused     rmscl     emscl      ihdo
        0.0         0         0                           0.0       0.0         0
 *DATABASE_BNDOUT
@@ -253,7 +253,7 @@ $#                a1                  o1
                 60.1                0.02
                100.0                0.05
 *DEFINE_CURVE_TITLE
-DT_MAX - variabelt dt styret af svejsefase
+DT_TARG - variabelt dt styret af svejsefase
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
       7442         0       1.0       1.0       0.0       0.0         0         0
 $#                a1                  o1
@@ -268,8 +268,8 @@ $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
       6969         0       1.0       1.0       0.0       0.0         0         0
 $#                a1                  o1
                  0.0                 0.0
-                50.0                 0.0
-                60.1                 1.0
+                40.0                 0.0
+                50.1                 1.0
               1000.0                 1.0
 *INCLUDE
 boundary.k
