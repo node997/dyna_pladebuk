@@ -85,7 +85,7 @@ $#  msglvl    maxitr    abstol    reltol     omega    unused    unused       tsf
          0       5001.0000E-101.00000E-6       0.0                           1.0
 *CONTROL_THERMAL_TIMESTEP
 $#      ts       tip       its      tmin      tmax     dtemp      tscp      lcts
-         1       1.0       0.1    1.0E-9     -4441     100.0      0.95      4441
+         1       1.0       0.1     -7440     -7441     100.0      0.95      7442
 *CONTROL_TIMESTEP
 $#  dtinit    tssfac      isdo    tslimt     dt2ms      lctm     erode     ms1st
        0.1       1.0         0       0.0       0.0      4441         0         0
@@ -149,7 +149,7 @@ $#   iform   ibinary                                                      unused
 $#    ssid    pserod
     420420         0
 $#   hlcid     hmult     tlcid     tmult       loc
-      6969      0.02         0     295.0         0
+      6969      0.06         0     295.0         0
 *BOUNDARY_THERMAL_WELD_TRAJECTORY
 $#     pid      ptyp     nsid1      spd1     nsid2      spd2      ncyc    relvel
          1         1        20       4.0      -569       0.0        10         0
@@ -237,12 +237,31 @@ $#                a1                  o1
 *DEFINE_CURVE_TITLE
 DT_MAX - variabelt dt styret af svejsefase
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
-      4441         0       1.0       1.0       0.0       0.0         0         0
+      7441         0       1.0       1.0       0.0       0.0         0         0
 $#                a1                  o1
                  0.0                 0.1
-                50.0                 0.1
-                60.1                 0.1
-               200.0                 0.1
+                40.0                 0.1
+                60.1                 0.5
+               100.0                 1.0
+*DEFINE_CURVE_TITLE
+DT_MIN - minimum dt
+$#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
+      7440         0       1.0       1.0       0.0       0.0         0         0
+$#                a1                  o1
+                 0.0                0.01
+                40.0                0.01
+                60.1                0.02
+               100.0                0.05
+*DEFINE_CURVE_TITLE
+DT_MAX - variabelt dt styret af svejsefase
+$#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
+      7442         0       1.0       1.0       0.0       0.0         0         0
+$#                a1                  o1
+                 0.0                 0.1
+                40.0                0.05
+                60.1                 0.2
+               100.0                 0.5
+
 *DEFINE_CURVE_TITLE
 AFKOLING - turns on cooling after xxx seconds
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
