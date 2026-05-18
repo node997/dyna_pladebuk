@@ -157,6 +157,10 @@ $#   iform      lcid         q     lcrot     lcmov     lclat      disc     enfor
          1      1010      0.80      1011      1012         0       2.0         0
 $#      p1        p2        p3        p4        p5        p6        p7        p8
       16.0       3.0      16.0      16.0       0.6       1.4       3.0       0.0
+$#   iform      lcid         q     lcrot     lcmov     lclat      disc     enfor
+$         4      1010      0.80      1011      1012         0       2.0         0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+$      16.0      16.0       4.0
 *CONTACT_TIED_SURFACE_TO_SURFACE_THERMAL_ID
 $#     cid                                                                 title
      80085Left_on_left_action
