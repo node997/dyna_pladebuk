@@ -74,7 +74,7 @@ $#    soln       nlq     isnan     lcint     lcacc     ncdcf    nocopy      crvp
          2         0         0         0         0         1         0         0
 *CONTROL_TERMINATION
 $#  endtim    endcyc     dtmin    endeng    endmas     nosol              unused
-     240.0         0       0.0       0.0  100000.0         0
+     120.0         0       0.0       0.0  100000.0         0
 *CONTROL_THERMAL_NONLINEAR
 $#  refmax       tol       dcp    lumpbc    thlstl    nlthpr    phchpn    unused
        1001.00000E-4       0.5         0       0.1         0       0.0

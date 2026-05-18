@@ -36,7 +36,7 @@ $#     ihq        qh
          6       0.1
 *CONTROL_IMPLICIT_AUTO
 $#   iauto    iteopt    itewin     dtmin     dtmax     dtexp     kfail    kcycle
-         1         3         2       0.0     -4441       0.0         0         0
+         1         4         2       0.0     -4441       0.0         0         0
 *CONTROL_IMPLICIT_GENERAL
 $#  imflag       dt0    imform      nsbs       igs     cnstn      form    zero_v
          1       0.1         2         1         1         0         0         0
@@ -63,7 +63,7 @@ $#   iprtf    ierode   tet10s8    msgmax    ipcurv      gmdt   ip1dblt      eocs
          0         0         2         0         0       0.0         0         0
 *CONTROL_PARALLEL
 $#    ncpu    numrhs     const      para                                  unused
-       -64         0         1         0
+         0         0         1         0
 *CONTROL_SOLID
 $#   esort   fmatrix   niptets    swlocl    psfail   t10jtol      icoh    tet13k
          1         2         4         1         0       0.0         0         0
@@ -93,40 +93,40 @@ $#  dt2msf   dt2mslc     imscl    unused    unused     rmscl     emscl      ihdo
        0.0         0         0                           0.0       0.0         0
 *DATABASE_BNDOUT
 $#      dt    binary      lcur     ioopt   option1   option2   option3   option4
-      0.53         3         0         1         0         0         0         0
+       0.5         3         0         1         0         0         0         0
 *DATABASE_DEFORC
 $#      dt    binary      lcur     ioopt
-      0.53         3         0         1
+       0.5         3         0         1
 *DATABASE_ELOUT
 $#      dt    binary      lcur     ioopt   option1   option2   option3   option4
-      0.53         3         0         1         0         0         0         0
+       0.5         3         0         1         0         0         0         0
 *DATABASE_GLSTAT
 $#      dt    binary      lcur     ioopt
-      0.53         3         0         1
+       0.5         3         0         1
 *DATABASE_JNTFORC
 $#      dt    binary      lcur     ioopt
-      0.53         3         0         1
+       0.5         3         0         1
 *DATABASE_MATSUM
 $#      dt    binary      lcur     ioopt
-      0.53         3         0         1
+       0.5         3         0         1
 *DATABASE_NCFORC
 $#      dt    binary      lcur     ioopt
-      0.53         3         0         1
+       0.5         3         0         1
 *DATABASE_NODOUT
 $#      dt    binary      lcur     ioopt   option1   option2
-      0.53         3         0         1       0.0         0
+       0.5         3         0         1       0.0         0
 *DATABASE_RCFORC
 $#      dt    binary      lcur     ioopt
-      0.53         3         0         1
+       0.5         3         0         1
 *DATABASE_SPCFORC
 $#      dt    binary      lcur     ioopt
-      0.53         3         0         1
+       0.5         3         0         1
 *DATABASE_TPRINT
 $#      dt    binary      lcur     ioopt
-      0.53         3         0         1
+       0.5         3         0         1
 *DATABASE_BINARY_D3PLOT
 $#      dt      lcdt      beam     npltc    psetid                       unused1
-      0.53         0         0         0         0
+       0.5         0         0         0         0
 $#   ioopt      rate    cutoff    window      type      pset
          0       0.0       0.0       0.0         0         0
 *DATABASE_BINARY_D3PROP
@@ -134,7 +134,7 @@ $#   ifile     imatl     iwall
          2         1         0
 *DATABASE_BINARY_INTFOR
 $#      dt      lcdt      beam     npltc    psetid                        unused
-       1.5         0         0         0         0
+       0.5         0         0         0         0
 *DATABASE_EXTENT_BINARY
 $#   neiph     neips    maxint    strflg    sigflg    epsflg    rltflg    engflg
          0         0         0        10         1         1         1         1
@@ -216,9 +216,10 @@ $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
       4441         0       1.0       1.0       0.0       0.0         0         0
 $#                a1                  o1
                  0.0                 0.1
+                37.8                 0.1
                 50.0                 0.5
                 60.1                 2.0
-               200.0                 5.0
+               240.0                 5.0
 *DEFINE_CURVE_TITLE
 AFKOLING - turns on cooling after xxx seconds
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
