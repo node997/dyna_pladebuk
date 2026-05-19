@@ -1,9 +1,5 @@
-$# LS-PrePost command file created by LS-PrePost(R) 2025 R1 (v4.12) -Beta- 18Jun2024 -64bit-Linux
-$# Created on May-14-2026 (09:49:52)
-bgstyle fade
-open d3plot "/home/ubuntu/dyna_pladebuk/Plade_300_150_4/iter_01/d3plot"
-ac
-ac
-output append 1
-output "/home/ubuntu/dyna_pladebuk/Plade_300_150_4/iter_01/deform_geo.k" 241 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000 0 0
-quit
+$# LS-PrePost command file created by LS-PrePost(R) 2024/R2(4.11.14)-25Feb2025 -64bit-Linux
+$# Created on May-19-2026 (10:33:59)
+open keyword "/home/jakob/Dokumenter/Dyna/dyna1/dyna24/dynascripting/Plade_300_150_4/main.k"
+Message 1
+Message 0
