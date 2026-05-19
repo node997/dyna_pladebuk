@@ -1,0 +1,585 @@
+
+
+ ***************************************************************
+ *            ANSYS 2023 R1          LEGAL NOTICES             *
+ ***************************************************************
+ *                                                             *
+ * Copyright 1971-2022 ANSYS, Inc.  All rights reserved.       *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of ANSYS, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the ANSYS, Inc. online documentation or the ANSYS, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * ANSYS, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * ANSYS, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the ANSYS, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the ANSYS, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+      Date: 05/15/2026      Time: 13:26:09  
+      ___________________________________________________ 
+     |                                                   |
+     |  LS-DYNA, A Program for Nonlinear Dynamic         |
+     |  Analysis of Structures in Three Dimensions       |
+     |  Date    : 12/12/2022    Time: 11:35:09           |
+     |  Version : smp d R14                              |
+     |  Revision: R14.0-515-g8a12796b62                  |
+     |                                                   |
+     |  Features enabled in this version:                |
+     |    Shared Memory Parallel                         |
+     |    CESE CHEMISTRY EM ICFD STOCHASTIC_PARTICLES    |
+     |    FFTW (multi-dimensional FFTW Library)          |
+     |    ARPACK (nonsymmetric eigensolver library)      |
+     |    ANSYSLIC enabled                               |
+     |                                                   |
+     |  Licensed to: Aalborg University -- 254321        |
+     |  Issued by  : pranay_chaudhari_09182025           |
+     |                                                   |
+     |  Platform   : Xeon64 System                       |
+     |  OS Level   : Linux 4.4.49 uom                    |
+     |  Compiler   : Intel Fortran Compiler 19.0 SSE2    |
+     |  Hostname   : archlinux-jakob                     |
+     |  Precision  : Double precision (I8R8)             |
+     |                                                   |
+     |  Unauthorized use infringes Ansys, Inc. copyrights|
+     |___________________________________________________|
+
+
+ Command line options: i=main.k
+
+ Input file: main.k                                                                          
+
+ The native file format       : 64-bit small endian
+ Memory size from default     :   100000000
+ allocating  memory to   100000000 d     1977354 Initial allocation
+
+ ********  notice  ********  notice  ********  notice  ********
+ *                                                            *
+ * This is the LS-DYNA Finite Element code.                   *
+ *                                                            *
+ * Neither LST nor the authors assume any responsibility for  *
+ * the validity, accuracy, or applicability of any results    *
+ * obtained from this system. Users must verify their own     *
+ * results.                                                   *
+ *                                                            *
+ * LST endeavors to make the LS-DYNA code as complete,        *
+ * accurate and easy to use as possible.                      *
+ * Suggestions and comments are welcomed.  Please report any  *
+ * errors encountered in either the documentation or results  *
+ * immediately to LST through your site focus.                *
+ *                                                            *
+ * Copyright (C) 1990-2021                                    *
+ * by Livermore Software Technology, LLC                      *
+ * All rights reserved                                        *
+ *                                                            *
+ ********  notice  ********  notice  ********  notice  ********
+ 
+LSTC Environment Variables:
+ 
+LSTC_LICENSE_SERVER=172.19.9.10
+LSTC_LICENSE=network
+ 
+
+ Beginning of keyword reader                                   05/15/26 13:26:09
+ expanding   memory to       37890 d     2427217  
+ expanding   memory to       67890 d     2427217  
+ expanding   memory to       89223 d     2487217  
+ expanding   memory to      119989 d     2618337  
+ expanding   memory to      142157 d     2618337  
+ expanding   memory to      197157 d     2618337  
+ expanding   memory to      223126 d     2618337  
+
+                                                               05/15/26 13:26:09
+ Open include file: boundary.k
+
+                                                               05/15/26 13:26:09
+ Open include file: MAT_CWM355.k
+
+                                                               05/15/26 13:26:09
+ Open include file: geometry.k
+ expanding   memory to      262429 d     2884049  
+ expanding   memory to      282705 d     3161073  
+ expanding   memory to      305105 d     3161073  
+ expanding   memory to      326010 d     3196747  
+
+ Memory required to process keyword     :     326010  
+ Additional dynamic memory required     :    3197955  
+
+ contracting memory to           1 d     2456006 end of keyword reader
+
+ LS-DYNA will perform a coupled structural/thermal analysis 
+
+ LS-DYNA SIMULERING AF VARME DER BUKKER PLADE - J. G                     
+                    ls-dyna smp d R14 R14.0_515_8a12796 date 12/12/2022
+ expanding   memory to        2001 d     1550787 material, node and element data
+ expanding   memory to        2072 d     1550900 material properties
+ expanding   memory to       42626 d     1742736 element data for composite material
+ expanding   memory to       42662 d     2345938 gradient of damage data
+ expanding   memory to       42684 d     2576884 user control for contact interfaces
+ expanding   memory to      167984 d     2576892 mortar contact flags
+ expanding   memory to      167988 d     2576892 flag for sliding interfaces
+ contracting memory to      167968 d     2597171 thermal expansion 0
+ expanding   memory to      167970 d     2597174 cross-sectional force definitions 0
+ expanding   memory to      188246 d     2597195 temp index array for node sorting
+ contracting memory to      167970 d     2617475 just because?
+ expanding   memory to      183360 d     2658053 arbitrary element numbering input
+ ___________________________________________________
+
+ Listing the top 100 solid elements wrt aspect ratio
+ ___________________________________________________
+
+            Element #        Aspect ratio
+            =========        ============
+
+                15001    0.2500000000E+01
+                15002    0.2500000000E+01
+                15003    0.2500000000E+01
+                15004    0.2500000000E+01
+                15005    0.2500000000E+01
+                15006    0.2500000000E+01
+                15007    0.2500000000E+01
+                15008    0.2500000000E+01
+                15009    0.2500000000E+01
+                15010    0.2500000000E+01
+                15011    0.2500000000E+01
+                15012    0.2500000000E+01
+                15013    0.2500000000E+01
+                15014    0.2500000000E+01
+                15015    0.2500000000E+01
+                15016    0.2500000000E+01
+                15017    0.2500000000E+01
+                15018    0.2500000000E+01
+                15019    0.2500000000E+01
+                15020    0.2500000000E+01
+                15021    0.2500000000E+01
+                15022    0.2500000000E+01
+                15023    0.2500000000E+01
+                15024    0.2500000000E+01
+                15025    0.2500000000E+01
+                15026    0.2500000000E+01
+                15027    0.2500000000E+01
+                15028    0.2500000000E+01
+                15029    0.2500000000E+01
+                15030    0.2500000000E+01
+                15031    0.2500000000E+01
+                15032    0.2500000000E+01
+                15033    0.2500000000E+01
+                15034    0.2500000000E+01
+                15035    0.2500000000E+01
+                15036    0.2500000000E+01
+                15037    0.2500000000E+01
+                15038    0.2500000000E+01
+                15039    0.2500000000E+01
+                15040    0.2500000000E+01
+                15041    0.2500000000E+01
+                15042    0.2500000000E+01
+                15043    0.2500000000E+01
+                15044    0.2500000000E+01
+                15045    0.2500000000E+01
+                15046    0.2500000000E+01
+                15047    0.2500000000E+01
+                15048    0.2500000000E+01
+                15049    0.2500000000E+01
+                15050    0.2500000000E+01
+                15051    0.2500000000E+01
+                15052    0.2500000000E+01
+                15053    0.2500000000E+01
+                15054    0.2500000000E+01
+                15055    0.2500000000E+01
+                15056    0.2500000000E+01
+                15057    0.2500000000E+01
+                15058    0.2500000000E+01
+                15059    0.2500000000E+01
+                15060    0.2500000000E+01
+                15061    0.2500000000E+01
+                15062    0.2500000000E+01
+                15063    0.2500000000E+01
+                15064    0.2500000000E+01
+                15065    0.2500000000E+01
+                15066    0.2500000000E+01
+                15067    0.2500000000E+01
+                15068    0.2500000000E+01
+                15069    0.2500000000E+01
+                15070    0.2500000000E+01
+                15071    0.2500000000E+01
+                15072    0.2500000000E+01
+                15073    0.2500000000E+01
+                15074    0.2500000000E+01
+                15075    0.2500000000E+01
+                15076    0.2500000000E+01
+                15077    0.2500000000E+01
+                15078    0.2500000000E+01
+                15079    0.2500000000E+01
+                15080    0.2500000000E+01
+                15081    0.2500000000E+01
+                15082    0.2500000000E+01
+                15083    0.2500000000E+01
+                15084    0.2500000000E+01
+                15085    0.2500000000E+01
+                15086    0.2500000000E+01
+                15087    0.2500000000E+01
+                15088    0.2500000000E+01
+                15089    0.2500000000E+01
+                15090    0.2500000000E+01
+                15091    0.2500000000E+01
+                15092    0.2500000000E+01
+                15093    0.2500000000E+01
+                15094    0.2500000000E+01
+                15095    0.2500000000E+01
+                15096    0.2500000000E+01
+                15097    0.2500000000E+01
+                15098    0.2500000000E+01
+                15099    0.2500000000E+01
+                15100    0.2500000000E+01
+ ___________________________________________________
+ expanding   memory in thermal solver, additional words needed for a-vector   1079K
+ contracting memory to      167990 d     4542093 spc cards
+ contracting memory to      167970 d     4542160 rcforc moments
+ expanding   memory to      170056 d     7409441 load curve data
+ expanding   memory to      179761 d     7409441 user_define_loading_set
+ expanding   memory to      200265 d     7409441 regularize time history data
+ contracting memory to      200041 d     7409441 *DEFINE_ELEMENT_DEATH
+ expanding   memory to      241597 d     7660397 implicit contact 1
+ expanding   memory to      364719 d     7660397 implicit contact 2
+ 
+ *** Warning 60303 (IMP+303)
+     Using IGAP=1 may result in zero contact forces.
+     If this occurs set IGAP=2.
+     Number of uses of IGAP=1 is 2
+ contracting memory to      201045 d     7671226 contact segment data 1
+ expanding   memory to      384993 d     7691330 contact segment data 3
+ contracting memory to      200045 d     8463063 contact definition
+ expanding   memory to      200061 d     8463063 mortar contact data
+ expanding   memory to      200092 d     8472974 contact friction
+ expanding   memory to      302901 d     8472974 implicit friction
+ expanding   memory to      303001 d     8493395 rigid bodies for disp. termination
+ expanding   memory to      303060 d     8493395 save d3plot control data
+ expanding   memory in thermal solver, additional words needed for s-vector    119K
+ expanding   memory to      303088 d     8694790 sensor_control for curve
+
+     surfa surface of interface   = 80086
+     type                         =       a 3
+     surface timestep             = 1.669E-07
+     controlling surfa node ID    = 1
+     part ID of surfa node        = 1
+     current minimum time step    = 1.669E-07
+
+     surfb surface of interface   = 80086
+     type                         =       a 3
+     surface timestep             = 1.605E-06
+     controlling surfb node ID    = 19394
+     part ID of surfb node        = 2
+     current minimum time step    = 1.669E-07
+
+     surfa surface of interface   = 8009
+     type                         =       a 3
+     surface timestep             = 1.669E-07
+     controlling surfa node ID    = 51
+     part ID of surfa node        = 1
+     current minimum time step    = 1.669E-07
+
+     surfb surface of interface   = 8009
+     type                         =       a 3
+     surface timestep             = 1.605E-06
+     controlling surfb node ID    = 19829
+     part ID of surfb node        = 3
+     current minimum time step    = 1.669E-07
+
+ The LS-DYNA time step size should not exceed     1.669E-07
+ to avoid contact instabilities.  If the step size is
+ bigger then scale the penalty of the offending surface.
+ expanding   memory to      322848 d     8879188 implicit tied contact storage
+ expanding   memory to      322850 d     8879188 implicit explicit hybrid dummy
+ expanding   memory to      343126 d     8879188 implicit allocation 1
+ expanding   memory to      343147 d     8879188 implicit allocation 2
+ expanding   memory to      343203 d     8879188 implicit allocation 4
+Number of LS-DYNA  nodes                          =        20276
+Number of Implicit nodes                          =        20276
+Maximum Index                                     =        20276
+ expanding   memory to     2001145 d    10503869 implicit allocation 6
+
+ Memory required for implicit solution  :      2001145
+
+ S t o r a g e   a l l o c a t i o n   
+
+ Thermal dynamically allocated memory   :    1320K
+
+ Memory required to begin solution      :    2002K
+ Linear Alg dynamically allocated memory:      93K
+ Additional dynamically allocated memory:      11M
+                                   Total:      15M
+       1 t 0.0000E+00 dt 1.00E-01 begin thermal step           05/15/26 13:26:09
+
+    Convergence summary for nonlinear thermal solver:
+    ================================================
+
+    Number of Newton iterations           =        2
+    Number of iterations with line search =        0
+
+    Search direction norm                 =  0.86922E+00
+    Final temperature norm                =  0.42027E+05
+    Quotient                              =  0.20682E-04
+
+    Initial residual norm                 =  0.68628E+04
+    Final residual norm                   =  0.48797E+02
+    Quotient                              =  0.71105E-02
+
+    Initial power norm                    =  0.73625E+06
+    Final power norm                      =  0.38500E+02
+    Quotient                              =  0.52292E-04
+
+
+ calculation with mass scaling for minimum dt
+    added mass   =   0.0000E+00
+    physical mass=   1.4040E-03
+    ratio        =   0.0000E+00
+       1 t 0.0000E+00 dt 1.00E-01 flush i/o buffers            05/15/26 13:26:10
+       1 t 0.0000E+00 dt 1.00E-01 write d3plot file            05/15/26 13:26:10
+
+ BEGIN implicit statics  step      1 t= 1.0000E-01             05/15/26 13:26:10
+ ============================================================
+                time =  1.00000E-01
+   current step size =  1.00000E-01
+ expanding   memory to     2244461 d    10789602 implicit matrix assembly allocation
+
+
+     ================================================
+     ==            IMPLICIT USAGE ALERT            ==
+     ================================================
+     == Memory Management for Implicit has changed ==
+     == after R10.  Please use:                    ==
+     ==       memory=     3M                       ==
+     ================================================
+
+ no. of tie        constraints loaded =         2280
+ no. of global spc constraints loaded =           96
+      total no. of constraints loaded =         2376
+      total no. of dofs               =        60828
+      total no. of indep. dofs        =        58452
+ no. of tie        constraints loaded =         2280
+ no. of global spc constraints loaded =           96
+      total no. of constraints loaded =         2376
+
+ Stiffness matrix data:  Order            =           58452
+                         No. of Nonzeroes =         2039907
+
+ Memory Requirements:
+   In-core       :           30.95 Mwords
+   Out-of-Core   :            9.36 Mwords
+   Available     :          142.92 Mwords
+
+ Factor and Solve should be in-core 
+
+ Wall Clock Time:
+   Symbolic Fact.:            0.28 seconds
+   Numeric Factor:            0.69 seconds
+   Numeric Solve :            0.03 seconds
+
+ WCT: Linear Solver =          1.084 seconds
+ no. of tie        constraints loaded =         2280
+ no. of global spc constraints loaded =           96
+      total no. of constraints loaded =         2376
+ Iteration:   1     *|du|/|u| =  1.0000000E+00     *Ei/E0 =  1.0000000E+00
+
+ Stiffness matrix data:  Order            =           58452
+                         No. of Nonzeroes =         2039907
+
+ Wall Clock Time:
+   Symbolic Fact.:            0.00 seconds
+   Numeric Factor:            0.00 seconds
+   Numeric Solve :            0.04 seconds
+
+ WCT: Linear Solver =          0.037 seconds
+ no. of tie        constraints loaded =         2280
+ no. of global spc constraints loaded =           96
+      total no. of constraints loaded =         2376
+ no. of tie        constraints loaded =         2280
+ no. of global spc constraints loaded =           96
+      total no. of constraints loaded =         2376
+ Iteration:   2     *|du|/|u| =  2.4053430E-02     *Ei/E0 =  5.8630308E-04
+
+ Stiffness matrix data:  Order            =           58452
+                         No. of Nonzeroes =         2039907
+
+ Wall Clock Time:
+   Symbolic Fact.:            0.00 seconds
+   Numeric Factor:            0.00 seconds
+   Numeric Solve :            0.03 seconds
+
+ WCT: Linear Solver =          0.033 seconds
+ no. of tie        constraints loaded =         2280
+ no. of global spc constraints loaded =           96
+      total no. of constraints loaded =         2376
+ no. of tie        constraints loaded =         2280
+ no. of global spc constraints loaded =           96
+      total no. of constraints loaded =         2376
+ Iteration:   3     *|du|/|u| =  5.2187596E-03     *Ei/E0 =  7.7544626E-06
+
+ Equilibrium iterations summary step      1 t= 1.0000E-01      05/15/26 13:26:13
+    Number of iterations to converge         =           3
+    Number of stiffness reformations         =           0
+    Number of right hand side evaluations    =           4
+
+ Convergence detected as a combination of
+     1. Current  maximum   displacement translational norm           
+        Value =   8.1554E-04 vs Tolerance =   3.3543E-03
+ no. of tie        constraints loaded =         2280
+ no. of global spc constraints loaded =           96
+      total no. of constraints loaded =         2376
+      total no. of dofs               =        60828
+      total no. of indep. dofs        =        58452
+
+ BEGIN implicit statics  step      2 t= 2.0000E-01             05/15/26 13:26:13
+ ============================================================
+                time =  2.00000E-01
+   current step size =  1.00000E-01
+       2 t 1.0000E-01 dt 1.00E-01 begin thermal step           05/15/26 13:26:13
+
+    Convergence summary for nonlinear thermal solver:
+    ================================================
+
+    Number of Newton iterations           =        2
+    Number of iterations with line search =        0
+
+    Search direction norm                 =  0.44800E+01
+    Final temperature norm                =  0.42075E+05
+    Quotient                              =  0.10648E-03
+
+    Initial residual norm                 =  0.13862E+05
+    Final residual norm                   =  0.23428E+03
+    Quotient                              =  0.16901E-01
+
+    Initial power norm                    =  0.34963E+07
+    Final power norm                      =  0.95639E+03
+    Quotient                              =  0.27354E-03
+
+ no. of tie        constraints loaded =         2280
+ no. of global spc constraints loaded =           96
+      total no. of constraints loaded =         2376
+
+ Stiffness matrix data:  Order            =           58452
+                         No. of Nonzeroes =         2039907
+
+ Memory Requirements:
+   In-core       :           30.95 Mwords
+   Out-of-Core   :            9.36 Mwords
+   Available     :          142.92 Mwords
+
+ Factor and Solve should be in-core 
+
+ Wall Clock Time:
+   Symbolic Fact.:            0.28 seconds
+   Numeric Factor:            0.62 seconds
+   Numeric Solve :            0.03 seconds
+
+ WCT: Linear Solver =          1.009 seconds
+ no. of tie        constraints loaded =         2280
+ no. of global spc constraints loaded =           96
+      total no. of constraints loaded =         2376
+ Iteration:   1     *|du|/|u| =  3.9590151E-02     *Ei/E0 =  1.0000000E+00
+ 
+ *** termination due to sense switch: stop ***
+
+ Writing out last converged state for implicit.
+
+       9 t 1.0000E-01 dt 0.00E+00 write d3plot file            05/15/26 13:26:17
+       9 t 1.0000E-01 dt 0.00E+00 write d3plot file            05/15/26 13:26:17
+
+ E r r o r   t e r m i n a t i o n                             05/15/26 13:26:17
+
+ S t o r a g e   a l l o c a t i o n   
+
+ Thermal dynamically allocated memory   :    1320K
+
+ Memory required to complete solution   :    2245K
+ Linear Alg dynamically allocated memory:    6913K
+ Additional dynamically allocated memory:     155M
+                                   Total:     166M
+
+ T i m i n g   i n f o r m a t i o n
+                        CPU(seconds)   %CPU  Clock(seconds) %Clock
+  ----------------------------------------------------------------
+  Keyword Processing ... 1.3612E-01    1.94     1.3690E-01    1.68
+    KW Reading ......... 6.6663E-02    0.95     6.6985E-02    0.82
+    KW Writing ......... 2.9863E-02    0.43     2.9995E-02    0.37
+  Initialization ....... 2.2315E-01    3.18     3.6076E-01    4.43
+    Init Proc Phase 1 .. 1.8745E-01    2.67     1.9570E-01    2.40
+    Init Proc Phase 2 .. 2.0209E-02    0.29     2.3809E-02    0.29
+  Element processing ... 1.7565E+00   25.07     1.7671E+00   21.70
+    Solids ............. 1.7462E+00   24.92     1.7566E+00   21.57
+    E Other ............ 6.1357E-03    0.09     6.1850E-03    0.08
+  Binary databases ..... 4.8035E-03    0.07     4.8380E-03    0.06
+  ASCII database ....... 6.9425E-04    0.01     7.1900E-04    0.01
+  Contact algorithm .... 5.9109E-03    0.08     5.9860E-03    0.07
+    Interf. ID     80085 8.0486E-04    0.01     8.0900E-04    0.01
+    Interf. ID      8008 4.7899E-04    0.01     4.7800E-04    0.01
+    Interf. ID     80086 4.6108E-04    0.01     5.0000E-04    0.01
+    Interf. ID      8009 3.0253E-04    0.00     3.0000E-04    0.00
+  Implicit ............. 2.5730E-02    0.37     2.5947E-02    0.32
+  Implicit Nonlinear ... 1.1666E-01    1.66     1.0250E+00   12.59
+    Imp. NL force mod .. 7.6845E-02    1.10     7.7143E-02    0.95
+  Implicit Lin. Alg. ... 3.8196E+00   54.50     3.8719E+00   47.55
+    Imp. LA Mtx Assemb . 2.8097E-01    4.01     2.8437E-01    3.49
+    Imp. LA Factor ..... 3.3723E+00   48.12     3.4034E+00   41.79
+    Imp. LA Solve ...... 1.6618E-01    2.37     1.8405E-01    2.26
+  Thermal .............. 9.1030E-01   12.99     9.1431E-01   11.23
+    Element processing . 3.1003E-01    4.42     3.1118E-01    3.82
+    Contact ............ 3.4478E-03    0.05     3.4610E-03    0.04
+    Solver ............. 2.7235E-02    0.39     2.7378E-02    0.34
+    Other .............. 5.6711E-01    8.09     5.6981E-01    7.00
+  Time step size ....... 1.4533E-04    0.00     1.4800E-04    0.00
+  Others ............... 1.0963E-03    0.02     1.1010E-03    0.01
+  Misc. 1 .............. 2.9062E-03    0.04     2.4261E-02    0.30
+    Scale Masses ....... 3.7726E-04    0.01     3.8200E-04    0.00
+  Misc. 4 .............. 4.0395E-03    0.06     4.0840E-03    0.05
+    Timestep Init ...... 6.6992E-04    0.01     6.8300E-04    0.01
+    Apply Loads ........ 1.0590E-03    0.02     1.0590E-03    0.01
+    Compute exwork ..... 3.6147E-04    0.01     3.6800E-04    0.00
+  ----------------------------------------------------------------
+  T o t a l s            7.0078E+00  100.00     8.1432E+00  100.00
+
+ Problem time       =    1.0000E-01
+ Problem cycle      =         9
+ Total CPU time     =         7 seconds (   0 hours  0 minutes  7 seconds)
+ CPU time per zone cycle  =      48000.025 nanoseconds
+ Clock time per zone cycle=      55198.101 nanoseconds
+
+ Number of CPU's    1
+ NLQ used/max     192/  192
+ Start time   05/15/2026 13:26:09  
+ End time     05/15/2026 13:26:17  
+ Elapsed time       8 seconds for       9 cycles using  1 SMP thread 
+             (      0 hour   0 minute   8 seconds)
+
+ E r r o r   t e r m i n a t i o n                             05/15/26 13:26:17
