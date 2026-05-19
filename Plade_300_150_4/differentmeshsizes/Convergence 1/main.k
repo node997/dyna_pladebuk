@@ -1,4 +1,4 @@
-# LS-DYNA Keyword file created by LS-PrePost(R) 2024/R2(4.11.14)-25Feb2025
+$# LS-DYNA Keyword file created by LS-PrePost(R) 2024/R2(4.11.14)-25Feb2025
 $# Created on May-12-2026 (10:09:36)
 $# Copyright (c) 2026 node997
 $# https://github.com/node997/dyna_pladebuk
