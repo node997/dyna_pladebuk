@@ -149,10 +149,10 @@ $#   iform   ibinary                                                      unused
 $#    ssid    pserod
     420420         0
 $#   hlcid     hmult     tlcid     tmult       loc
-      6969      0.00         0     295.0         0
+      6969      0.10         0     295.0         0
 *BOUNDARY_THERMAL_WELD_TRAJECTORY
 $#     pid      ptyp     nsid1      spd1     nsid2      spd2      ncyc    relvel
-         1         1        20       4.0      -569       0.0        10         0
+         1         1        20       2.5      -569       0.0        10         0
 $#   iform      lcid         q     lcrot     lcmov     lclat      disc     enfor
          1      1010      0.80      1011      1012         0       2.0         0
 $#      p1        p2        p3        p4        p5        p6        p7        p8
@@ -221,8 +221,8 @@ $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
 $#                a1                  o1
                  0.0                 0.0
                  0.1             1000000
-                37.7             1000000
-                37.8                 0.0
+                60.0             1000000
+                60.1                 0.0
               1000.0                 0.0
 *DEFINE_CURVE_TITLE
 LROT - THERMAL WELD TRAJECTORY verification is needed !!!!
