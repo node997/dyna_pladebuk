@@ -1,5 +1,5 @@
 nohup: ignoring input
-Kører fra: /home/ubuntu/dyna_pladebuk/Plade_300_150_4/differentmeshsizes
+Kører fra: /home/ubuntu/dyna_pladebuk/Plade_300_150_4/differentmeshsizes/Convergence 2
 
   GREAT SUCCES: Alle filer fundet
 
@@ -55,7 +55,7 @@ Kører fra: /home/ubuntu/dyna_pladebuk/Plade_300_150_4/differentmeshsizes
  *                                                             *
  ***************************************************************
 
-      Date: 05/20/2026      Time: 09:10:39  
+      Date: 05/20/2026      Time: 09:09:53  
       ___________________________________________________ 
      |                                                   |
      |  LS-DYNA, A Program for Nonlinear Dynamic         |
@@ -146,136 +146,67 @@ Kører fra: /home/ubuntu/dyna_pladebuk/Plade_300_150_4/differentmeshsizes
  *                                                            *
  ********  notice  ********  notice  ********  notice  ********
 
- Beginning of keyword reader                                   05/20/26 09:10:40
-
-                                                               05/20/26 09:10:40
- Open include file: boundary.k
-
-                                                               05/20/26 09:10:40
- Open include file: MAT_CWM355.k
-
-                                                               05/20/26 09:10:40
- Open include file: geometry.k
-
- Memory required to process keyword     :     326254  
- Additional dynamic memory required     :    3197955  
-
+ Beginning of keyword reader                                   05/20/26 09:09:54
  
- *** Warning 60303 (IMP+303)
-     Using IGAP=1 may result in zero contact forces.
-     If this occurs set IGAP=2.
-     Number of uses of IGAP=1 is 2
+ *** Error 10087 (KEY+87)
+     in *INCLUDE file name:
+     File boundary+geo.k does not exist
+     Keyword read will continue but numerous errors may result
 
- input of data is completed
+                                                               05/20/26 09:09:54
+ Open include file: MAT_CWM355.k
+ 
+ *** Error 10087 (KEY+87)
+     in *INCLUDE file name:
+     File boundary+geo.k does not exist
+     Keyword read will continue but numerous errors may result
+ 
+ *** Error 10144 (KEY+144)
+      
+     segment set for convection b.c. # 1 is not found.
+     This is #420420 in the input order)
+ 
+ *** Error 10144 (KEY+144)
+     CHECKING BOUNDARY THERMAL WELD TRAJECTORY INPUT
+     node set for boundary thermal traj weld # 1 is not found.
+     This is #20 in the input order)
+ 
+ *** Error 10144 (KEY+144)
+     CHECKING BOUNDARY THERMAL WELD TRAJECTORY INPUT
+     segment set for boundary thermal traj weld # 1 is not found.
+     This is #569 in the input order)
+ 
+ *** Error 10133 (KEY+133)
+     input data failed with: 8 errors
 
- initial kinetic energy = 0.00000000E+00
+ E r r o r   t e r m i n a t i o n                             05/20/26 09:09:54
 
- The LS-DYNA time step size should not exceed     1.669E-07
- to avoid contact instabilities.  If the step size is
- bigger then scale the penalty of the offending surface.
+ Memory required to complete solution   :     182K
+ Additional dynamically allocated memory:    2099K
+                                   Total:    2281K
 
- Memory required for implicit solution  :      2003013
+ T i m i n g   i n f o r m a t i o n
+                        CPU(seconds)   %CPU  Clock(seconds) %Clock
+  ----------------------------------------------------------------
+  Keyword Processing ... 1.7029E-01    5.31     2.1286E-02    4.77
+    KW Reading ......... 4.7966E-02    1.50     5.9970E-03    1.34
+    KW Writing ......... 1.6350E-02    0.51     2.0430E-03    0.46
+  Initialization ....... 3.0339E+00   94.69     4.2536E-01   95.23
+  ----------------------------------------------------------------
+  T o t a l s            3.2042E+00  100.00     4.4665E-01  100.00
 
- termination time                  = 1.200E+02
+ Problem time       =    0.0000E+00
+ Problem cycle      =         0
+ Total CPU time     =         3 seconds (   0 hours  0 minutes  3 seconds)
+ CPU time per zone cycle  =          0.000 picoseconds
+ Clock time per zone cycle=          0.000 picoseconds
 
- Thermal dynamically allocated memory   :    1320K
+ Number of CPU's    8
+ NLQ used/max     192/  192
+ Start time   05/20/2026 09:09:54  
+ End time     05/20/2026 09:09:54  
+ Elapsed time       0 second  for       0 cycles using  8 SMP threads
+             (      0 hour   0 minute   0 second )
 
- Memory required to begin solution      :    2004K
- Linear Alg dynamically allocated memory:      93K
- Additional dynamically allocated memory:      11M
-                                   Total:      14M
-
- initialization completed
-       1 t 0.0000E+00 dt 1.00E-01 begin thermal step           05/20/26 09:10:42
-
- calculation with mass scaling for minimum dt
-    added mass   =   0.0000E+00
-    physical mass=   1.4040E-03
-    ratio        =   0.0000E+00
-       1 t 0.0000E+00 dt 1.00E-01 flush i/o buffers            05/20/26 09:10:44
-       1 t 0.0000E+00 dt 1.00E-01 write d3plot file            05/20/26 09:10:44
-
- BEGIN implicit statics  step      1 t= 1.0000E-01             05/20/26 09:10:44
-
-
-     ================================================
-     ==            IMPLICIT USAGE ALERT            ==
-     ================================================
-     == Memory Management for Implicit has changed ==
-     == after R10.  Please use:                    ==
-     ==       memory=     3M                       ==
-     ================================================
-
- Iteration:   1     *|du|/|u| =  1.0000000E+00     *Ei/E0 =  1.0000000E+00
- Iteration:   2     *|du|/|u| =  2.9665835E-02     *Ei/E0 =  5.7942979E-04
- Iteration:   3     *|du|/|u| =  5.0218177E-03     *Ei/E0 =  7.3518382E-06
- Equilibrium established after     3 iterations                05/20/26 09:10:48
-    
- estimated total cpu time          =     29835 sec (       8 hrs 17 mins)
- estimated cpu time to complete    =     29804 sec (       8 hrs 16 mins)
- estimated total clock time        =      5858 sec (       1 hrs 37 mins)
- estimated clock time to complete  =      5851 sec (       1 hrs 37 mins)
-
- BEGIN implicit statics  step      2 t= 2.0000E-01             05/20/26 09:10:48
-       2 t 1.0000E-01 dt 1.00E-01 begin thermal step           05/20/26 09:10:48
- Iteration:   1     *|du|/|u| =  9.3693968E-03     *Ei/E0 =  1.0000000E+00
- Iteration:   2     *|du|/|u| =  1.8688352E-05     *Ei/E0 =  8.4960076E-09
- Equilibrium established after     2 iterations                05/20/26 09:10:52
-
- BEGIN implicit statics  step      3 t= 3.0000E-01             05/20/26 09:10:52
-       3 t 2.0000E-01 dt 1.00E-01 begin thermal step           05/20/26 09:10:52
- Iteration:   1     *|du|/|u| =  9.4699979E-03     *Ei/E0 =  9.7445993E-01
- Iteration:   2     *|du|/|u| =  8.6282520E-06     *Ei/E0 =  8.3092248E-09
- Equilibrium established after     2 iterations                05/20/26 09:10:56
-
- BEGIN implicit statics  step      4 t= 4.0000E-01             05/20/26 09:10:56
-       4 t 3.0000E-01 dt 1.00E-01 begin thermal step           05/20/26 09:10:56
- Iteration:   1     *|du|/|u| =  9.5307688E-03     *Ei/E0 =  9.5057375E-01
- Iteration:   2     *|du|/|u| =  8.6287101E-06     *Ei/E0 =  8.2416452E-09
- Equilibrium established after     2 iterations                05/20/26 09:11:00
-
- BEGIN implicit statics  step      5 t= 5.0000E-01             05/20/26 09:11:00
-       5 t 4.0000E-01 dt 1.00E-01 begin thermal step           05/20/26 09:11:00
- Iteration:   1     *|du|/|u| =  9.5795611E-03     *Ei/E0 =  9.3003208E-01
- Iteration:   2     *|du|/|u| =  8.7343591E-06     *Ei/E0 =  8.2553732E-09
- Equilibrium established after     2 iterations                05/20/26 09:11:04
-      23 t 5.0000E-01 dt 1.00E-01 write d3plot file            05/20/26 09:11:04
-
- BEGIN implicit statics  step      6 t= 6.0000E-01             05/20/26 09:11:04
-       6 t 5.0000E-01 dt 1.00E-01 begin thermal step           05/20/26 09:11:04
- Iteration:   1     *|du|/|u| =  9.6242391E-03     *Ei/E0 =  9.1226337E-01
- Iteration:   2     *|du|/|u| =  8.8254511E-06     *Ei/E0 =  8.3327749E-09
- Equilibrium established after     2 iterations                05/20/26 09:11:08
-
- BEGIN implicit statics  step      7 t= 7.0000E-01             05/20/26 09:11:08
-       7 t 6.0000E-01 dt 1.00E-01 begin thermal step           05/20/26 09:11:08
- Iteration:   1     *|du|/|u| =  9.7047664E-03     *Ei/E0 =  9.0171876E-01
- Iteration:   2     *|du|/|u| =  8.8031772E-06     *Ei/E0 =  8.4926012E-09
- Equilibrium established after     2 iterations                05/20/26 09:11:13
-
- BEGIN implicit statics  step      8 t= 8.0000E-01             05/20/26 09:11:13
-       8 t 7.0000E-01 dt 1.00E-01 begin thermal step           05/20/26 09:11:13
- Iteration:   1     *|du|/|u| =  9.8028066E-03     *Ei/E0 =  8.9546739E-01
- Iteration:   2     *|du|/|u| =  9.6092208E-06     *Ei/E0 =  8.7268031E-09
- Equilibrium established after     2 iterations                05/20/26 09:11:17
-
- BEGIN implicit statics  step      9 t= 9.0000E-01             05/20/26 09:11:17
-       9 t 8.0000E-01 dt 1.00E-01 begin thermal step           05/20/26 09:11:17
-forrtl: error (78): process killed (SIGTERM)
-Image              PC                Routine            Line        Source             
-dyna_d             000000000E0539A4  Unknown               Unknown  Unknown
-libc.so.6          00007F7F1DE9D520  Unknown               Unknown  Unknown
-libc.so.6          00007F7F1DE9D75B  kill                  Unknown  Unknown
-dyna_d             000000000E087AEA  Unknown               Unknown  Unknown
-dyna_d             00000000004385EE  Unknown               Unknown  Unknown
-dyna_d             000000000313984C  Unknown               Unknown  Unknown
-dyna_d             00000000030961E4  Unknown               Unknown  Unknown
-dyna_d             0000000001614733  Unknown               Unknown  Unknown
-dyna_d             0000000001600D3D  Unknown               Unknown  Unknown
-dyna_d             00000000015D84BE  Unknown               Unknown  Unknown
-dyna_d             0000000001717C0B  Unknown               Unknown  Unknown
-dyna_d             000000000042E8FF  Unknown               Unknown  Unknown
-dyna_d             000000000041E822  Unknown               Unknown  Unknown
-libc.so.6          00007F7F1DE84D90  Unknown               Unknown  Unknown
-libc.so.6          00007F7F1DE84E40  __libc_start_main     Unknown  Unknown
-dyna_d             000000000041E724  Unknown               Unknown  Unknown
+ E r r o r   t e r m i n a t i o n                             05/20/26 09:09:54
+  ERROR: LS-DYNA fejlede – stopper

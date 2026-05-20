@@ -9,7 +9,7 @@ NCPU=8
 echo "Kører fra: $BASE_DIR"
 echo ""
  
-for f in geometry.k main.k boundary.k MAT_CWM355.k; do
+for f in boundary+geo.k main.k boundary.k MAT_CWM355.k; do
     if [ ! -f "$BASE_DIR/$f" ]; then
         echo "  ERROR: Mangler $f – stopper"
         exit 1
