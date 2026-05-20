@@ -85,7 +85,8 @@ $#  msglvl    maxitr    abstol    reltol     omega    unused    unused       tsf
          0       5001.0000E-101.00000E-6       0.0                           1.0
 *CONTROL_THERMAL_TIMESTEP
 $#      ts       tip       its      tmin      tmax     dtemp      tscp      lcts
-         0       1.0       0.1     -7440     -7441     100.0      0.95      7442
+$         0       1.0       0.1     -7440     -7441     100.0      0.95      7442
+         0       1.0       0.1               -7441     100.0      0.95
 *CONTROL_TIMESTEP
 $#  dtinit    tssfac      isdo    tslimt     dt2ms      lctm     erode     ms1st
        0.1       1.0         0       0.0       0.0      7441         0         0

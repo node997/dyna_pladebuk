@@ -8,10 +8,10 @@ LS-DYNA SIMULERING AF VARME DER BUKKER PLADE - J. G
 $#   dflag
          4
 *CONTROL_ACCURACY
-$#     osu       inn    pidosu      iacc     exacc
+$#     osu       inn    pidosu      iacc     exacc                        unused
          1         4         0         1       0.0
 *CONTROL_BULK_VISCOSITY
-$#      q1        q2      type     btype    tstype
+$#      q1        q2      type     btype    tstype                        unused
        1.5      0.06         1         0         0
 *CONTROL_CONTACT
 $#  slsfac    rwpnal    islchk    shlthk    penopt    thkchg     orien    enmass
@@ -60,7 +60,7 @@ $#   npopt    neecho    nrefup    iaccop     opifs    ipnint    ikedit    iflush
 $#   iprtf    ierode   tet10s8    msgmax    ipcurv      gmdt   ip1dblt      eocs
          0         0         2         0         0       0.0         0         0
 *CONTROL_PARALLEL
-$#    ncpu    numrhs     const      para
+$#    ncpu    numrhs     const      para                                  unused
          0         0         1         0
 *CONTROL_SOLID
 $#   esort   fmatrix   niptets    swlocl    psfail   t10jtol      icoh    tet13k
@@ -71,10 +71,10 @@ $#   pm1     pm2     pm3     pm4     pm5     pm6     pm7     pm8     pm9    pm10
 $#    soln       nlq     isnan     lcint     lcacc     ncdcf    nocopy      crvp
          2         0         0         0         0         1         0         0
 *CONTROL_TERMINATION
-$#  endtim    endcyc     dtmin    endeng    endmas     nosol
+$#  endtim    endcyc     dtmin    endeng    endmas     nosol              unused
      120.0         0       0.0       0.0  100000.0         0
 *CONTROL_THERMAL_NONLINEAR
-$#  refmax       tol       dcp    lumpbc    thlstl    nlthpr    phchpn
+$#  refmax       tol       dcp    lumpbc    thlstl    nlthpr    phchpn    unused
        1001.00000E-4       0.5         0       0.1         0       0.0
 *CONTROL_THERMAL_SOLVER
 $#   atype     ptype    solver         -       gpt    eqheat     fwork       sbc
@@ -83,7 +83,7 @@ $#  msglvl    maxitr    abstol    reltol     omega    unused    unused       tsf
          0       5001.0000E-101.00000E-6       0.0                           1.0
 *CONTROL_THERMAL_TIMESTEP
 $#      ts       tip       its      tmin      tmax     dtemp      tscp      lcts
-         0       1.0       0.1   -7440.0   -7441.0     100.0      0.95      7442
+         0       1.0       0.1              1.0E-9     100.0      0.95
 *CONTROL_TIMESTEP
 $#  dtinit    tssfac      isdo    tslimt     dt2ms      lctm     erode     ms1st
        0.1       1.0         0       0.0       0.0      7441         0         0
@@ -91,47 +91,56 @@ $#  dt2msf   dt2mslc     imscl    unused    unused     rmscl     emscl      ihdo
        0.0         0         0                           0.0       0.0         0
 *DATABASE_BNDOUT
 $#      dt    binary      lcur     ioopt   option1   option2   option3   option4
-       0.5         3         0         1         0         0         0         0
+      0.50         3         0         1         0         0         0         0
 *DATABASE_DEFORC
+$# ÆNDRET fra 1-part: dt 0.03->0.50
 $#      dt    binary      lcur     ioopt
-       0.5         3         0         1
+      0.50         3         0         1
 *DATABASE_ELOUT
+$# ÆNDRET fra 1-part: dt 0.03->0.50
 $#      dt    binary      lcur     ioopt   option1   option2   option3   option4
-       0.5         3         0         1         0         0         0         0
+      0.50         3         0         1         0         0         0         0
 *DATABASE_GLSTAT
+$# ÆNDRET fra 1-part: dt 0.03->0.50
 $#      dt    binary      lcur     ioopt
-       0.5         3         0         1
+      0.50         3         0         1
 *DATABASE_JNTFORC
+$# ÆNDRET fra 1-part: dt 0.03->0.50
 $#      dt    binary      lcur     ioopt
-       0.5         3         0         1
+      0.50         3         0         1
 *DATABASE_MATSUM
+$# ÆNDRET fra 1-part: dt 0.03->0.50
 $#      dt    binary      lcur     ioopt
-       0.5         3         0         1
+      0.50         3         0         1
 *DATABASE_NCFORC
+$# ÆNDRET fra 1-part: dt 0.03->0.50
 $#      dt    binary      lcur     ioopt
-       0.5         3         0         1
+      0.50         3         0         1
 *DATABASE_NODOUT
+$# ÆNDRET fra 1-part: dt 0.03->0.50
 $#      dt    binary      lcur     ioopt   option1   option2
-       0.5         3         0         1       0.0         0
+      0.50         3         0         1       0.0         0
 *DATABASE_RCFORC
+$# ÆNDRET fra 1-part: dt 0.03->0.50
 $#      dt    binary      lcur     ioopt
-       0.5         3         0         1
+      0.50         3         0         1
 *DATABASE_SPCFORC
+$# ÆNDRET fra 1-part: dt 0.03->0.50
 $#      dt    binary      lcur     ioopt
-       0.5         3         0         1
+      0.50         3         0         1
 *DATABASE_TPRINT
 $#      dt    binary      lcur     ioopt
        0.5         3         0         1
 *DATABASE_BINARY_D3PLOT
-$#      dt      lcdt      beam     npltc    psetid
-       0.5         0         0         0         0
+$#      dt      lcdt      beam     npltc    psetid                       unused1
+      0.50         0         0         0         0
 $#   ioopt      rate    cutoff    window      type      pset
          0       0.0       0.0       0.0         0         0
 *DATABASE_BINARY_D3PROP
 $#   ifile     imatl     iwall
          2         1         0
 *DATABASE_BINARY_INTFOR
-$#      dt      lcdt      beam     npltc    psetid
+$#      dt      lcdt      beam     npltc    psetid                        unused
        0.5         0         0         0         0
 *DATABASE_EXTENT_BINARY
 $#   neiph     neips    maxint    strflg    sigflg    epsflg    rltflg    engflg
@@ -139,34 +148,37 @@ $#   neiph     neips    maxint    strflg    sigflg    epsflg    rltflg    engflg
 $#  cmpflg    ieverp    beamip     dcomp      shge     stssz    n3thdt   ialemat
          0         0         0         1         1         1         2         0
 $# nintsld   pkp_sen      sclp     hydro     msscl     therm    intout    nodout
-         0         0       0.0         0         2         2                    
+         0         0       0.0         0         2         2
 *DATABASE_FORMAT
-$#   iform   ibinary
+$#   iform   ibinary                                                      unused
          0         0
 *BOUNDARY_CONVECTION_SET
 $#    ssid    pserod
     420420         0
+$# ÆNDRET fra 1-part: hmult 0.02->0.10
 $#   hlcid     hmult     tlcid     tmult       loc
-      6969       0.1         0     295.0         0
+      6969      0.10         0     295.0         0
 *BOUNDARY_THERMAL_WELD_TRAJECTORY
 $#     pid      ptyp     nsid1      spd1     nsid2      spd2      ncyc    relvel
          1         1        20       2.5      -569       0.0        10         0
+$#   iform      lcid         q     lcrot     lcmov     lclat      disc     enfor
 $         1      1010      0.80      1011      1012         0       2.0         0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
 $      16.0       3.0      16.0      16.0       0.6       1.4       3.0       0.0
 $#   iform      lcid         q     lcrot     lcmov     lclat      disc     enfor
-         4      1010       0.8      1011      1012         0       2.0         0
+         4      1010      0.70      1011      1012         0       2.0         0
 $#      p1        p2        p3        p4        p5        p6        p7        p8
-      16.0      16.0       4.0       0.0       0.0       0.0       0.0       0.0
+      16.0      10.0       3.5
 *LOAD_BODY_Y
 $#    lcid        sf    lciddr        xc        yc        zc       cid
          3       1.0         0       0.0       0.0       0.0        23
 *INITIAL_TEMPERATURE_SET
-$#    nsid      temp       loc
+$#    nsid      temp       loc                                           unused1
          0     295.0         0
 *DEFINE_COORDINATE_SYSTEM
 $#     cid        xo        yo        zo        xl        yl        zl      cidl
         23       0.0       0.0       0.0       1.0       0.0       0.0         0
-$#      xp        yp        zp
+$#      xp        yp        zp                                           unused2
        0.0       1.0       0.0
 *DEFINE_CURVE
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
@@ -187,6 +199,7 @@ $#                a1                  o1
               1000.0                 0.0
 *DEFINE_CURVE_TITLE
 LCID - THERMAL WELD TRAJECTORY
+$# ÆNDRET fra 1-part: aktiv periode 0.1->37.7 erstattet med 0.1->60.0 (svejsehastighed 2.5 mm/s, 150mm plade)
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
       1010         0       1.0       1.0       0.0       0.0         0         0
 $#                a1                  o1
@@ -210,25 +223,8 @@ $#                a1                  o1
                  0.0                 0.1
               1000.0                 0.1
 *DEFINE_CURVE_TITLE
-AFKOLING - turns on cooling after xxx seconds
-$#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
-      6969         0       1.0       1.0       0.0       0.0         0         0
-$#                a1                  o1
-                 0.0                 0.0
-                 0.1                 1.0
-                50.1                 1.0
-              1000.0                 1.0
-*DEFINE_CURVE_TITLE
-DT_MIN - minimum dt
-$#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
-      7440         0       1.0       1.0       0.0       0.0         0         0
-$#                a1                  o1
-                 0.0                 0.1
-                40.0                 0.1
-                60.1                 0.1
-               125.0                 0.1
-*DEFINE_CURVE_TITLE
 DT_MAX - variabelt dt styret af svejsefase
+$# ÆNDRET fra 1-part: kurve-ID 4441->7441, værdier opdateret fra 3-part
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
       7441         0       1.0       1.0       0.0       0.0         0         0
 $#                a1                  o1
@@ -237,7 +233,18 @@ $#                a1                  o1
                 60.1                 0.5
                125.0                 1.0
 *DEFINE_CURVE_TITLE
+DT_MIN - minimum dt
+$# TILFØJET fra 3-part (fandtes ikke i 1-part)
+$#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
+      7440         0       1.0       1.0       0.0       0.0         0         0
+$#                a1                  o1
+                 0.0                 0.1
+                40.0                 0.1
+                60.1                 0.1
+               125.0                 0.1
+*DEFINE_CURVE_TITLE
 DT_TARG - variabelt dt styret af svejsefase
+$# TILFØJET fra 3-part (fandtes ikke i 1-part)
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
       7442         0       1.0       1.0       0.0       0.0         0         0
 $#                a1                  o1
@@ -245,6 +252,17 @@ $#                a1                  o1
                 40.0                0.05
                 60.1                 0.2
                125.0                 0.5
+*DEFINE_CURVE_TITLE
+AFKOLING - turns on cooling after xxx seconds
+$#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
+      6969         0       1.0       1.0       0.0       0.0         0         0
+$#                a1                  o1
+                 0.0                 0.0
+                 0.1                 1.0
+                50.1                 1.0
+              1000.0                 1.0
+*INCLUDE
+MAT_CWM355.k
 *PART
 $#                                                                         title
 Plade
@@ -253,8 +271,6 @@ $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
 *SECTION_SOLID
 $#   secid    elform       aet    unused    unused    unused    cohoff   gaskeit
          1         2         0                                     0.0       0.0
-*INCLUDE
-MAT_CWM355.k
 *INCLUDE
 boundary+geo.k
 *SET_NODE_LIST_TITLE
