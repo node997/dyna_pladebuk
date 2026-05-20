@@ -1,7 +1,6 @@
 $# LS-DYNA Keyword file created by LS-PrePost(R) 2024/R2(4.11.14)-25Feb2025
 $# Created on Apr-17-2026 (14:08:34)
 *KEYWORD  
-
 *MAT_CWM_TITLE
 DIN_JAKOB_MODEL
 $#     mid        ro      lcem      lcpr      lcsy      lchr      lcat      beta

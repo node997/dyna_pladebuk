@@ -1,0 +1,10 @@
+$# LS-PrePost command file created by LS-PrePost(R) 2024/R2(4.11.14)-25Feb2025 -64bit-Linux
+$# Created on May-19-2026 (16:15:40)
+open keyword "/home/jakob/Dokumenter/Dyna/dyna1/dyna24/dynascripting/Plade_300_150_4/differentmeshsizes/Convergence 2/main.k"
+Message 1
+Message 0
+measure select 1
+measure dist N9436/0 N9437/0 ;
+measure dist N9385/0 N9538/0 ;
+measure dist N9232/0 N9181/0 ;
+measure select 0
