@@ -1,0 +1,92 @@
+$# LS-PrePost command file created by LS-PrePost(R) 2024/R2(4.11.14)-25Feb2025 -64bit-Linux
+$# Created on May-20-2026 (11:22:39)
+open keyword "/home/jakob/Dokumenter/Dyna/dyna1/dyna24/dynascripting/Plade_300_150_4/differentmeshsizes/Convergence 3/main.k"
+Message 1
+Message 0
+displayentity Set Segment off all
+displayentity Set Segment on 569
+displayentity Set Segment off all
+displayentity Set Segment off all
+displayentity Set Segment on 569
+displayentity Set Node off all
+displayentity Set Node on 20
+displayentity Set Node off all
+displayentity Set Node on 2
+displayentity Set Node off all
+displayentity Set Node off all
+displayentity Set Node on 20
+displayentity Set Segment off all
+displayentity Set Segment on 569
+displayentity Set Node off all
+displayentity Set Node on 20
+displayentity Set Segment off all
+displayentity Set Segment on 420420
+displayentity Set Node off all
+displayentity Set Node on 20
+displayentity Set Node off all
+displayentity Set Segment off all
+displayentity Set Segment on 420420
+displayentity Set Segment off all
+displayentity Set Segment off all
+displayentity Set Segment on 569
+setnode
+genselect clear
+setnode off
+setnode readlist 20
+setnode show  20
+clearent NodeSet all
+genselect clear
+setnode off
+setnode readlist 20
+setnode show  20
+setnode delete 20 
+back
+genselect target node
+genselect clear
+genselect clear
+loadstate 1;
+loadquat 0.500620 0.499835 0.500506 0.499037;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.209715;
+loadpan 1.968102 -8.154184;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.493252 0.630965 0.504049 0.602333
+setnode createset 20 1 0 0 0 0 "weld_node" 
+genselect clear
+setsegment
+genselect clear
+genselect target segment
+genselect clear
+genselect clear
+clearent SegmentSet all
+genselect clear
+setsegment off
+setsegment readlist 569
+setsegment show  569
+setsegment delete 569 
+genselect target segment
+genselect clear
+genselect clear
+displayentity Set Node off all
+displayentity Set Node on 20
+front
+back
+loadstate 1;
+loadquat 0.500000 0.500000 0.500000 0.500000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.209715;
+loadpan 1.968102 -8.154184;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect element add region in 0.495277 0.671262 0.512821 0.557794
+setsegment createset 569 1 0 0 0 0 "weld_segm" 
+genselect clear
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save outversion 10
+save keyword subsysfilename 1 "/home/jakob/Dokumenter/Dyna/dyna1/dyna24/dynascripting/Plade_300_150_4/differentmeshsizes/Convergence 3/main.k"
+save keyword subsysfilename 2 "/home/jakob/Dokumenter/Dyna/dyna1/dyna24/dynascripting/Plade_300_150_4/differentmeshsizes/Convergence 3/MAT_CWM355.k"
+save keyword subsysfilename 3 "/home/jakob/Dokumenter/Dyna/dyna1/dyna24/dynascripting/Plade_300_150_4/differentmeshsizes/Convergence 3/boundary+geo.k"
+save keyword bysubsystem
