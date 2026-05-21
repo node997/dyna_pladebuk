@@ -162,13 +162,13 @@ $#   hlcid     hmult     tlcid     tmult       loc
 $#     pid      ptyp     nsid1      spd1     nsid2      spd2      ncyc    relvel
          1         1        20       2.5      -569       0.0        10         0
 $#   iform      lcid         q     lcrot     lcmov     lclat      disc     enfor
-$         1      1010      0.80      1011      1012         0       2.0         0
+         1      1010      0.75      1011      1012         0       2.0         0
 $#      p1        p2        p3        p4        p5        p6        p7        p8
-$      16.0       3.0      16.0      16.0       0.6       1.4       3.0       0.0
+      16.0       3.0      16.0      16.0       0.6       1.4       3.0       0.0
 $#   iform      lcid         q     lcrot     lcmov     lclat      disc     enfor
-         4      1010      0.70      1011      1012         0       2.0         0
+$         4      1010      0.70      1011      1012         0       2.0         0
 $#      p1        p2        p3        p4        p5        p6        p7        p8
-      16.0      10.0       3.5
+$      16.0      10.0       3.5
 *LOAD_BODY_Y
 $#    lcid        sf    lciddr        xc        yc        zc       cid
          3       1.0         0       0.0       0.0       0.0        23

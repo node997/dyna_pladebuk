@@ -4,7 +4,7 @@ LSPP="/home/ubuntu/dyna/lsprepost4.12_common/lspp412_mesa"
 export LD_LIBRARY_PATH=/home/ubuntu/dyna/lsprepost4.12_common/lsppLibs:$LD_LIBRARY_PATH
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 ITERATIONS=1
-NCPU=8
+NCPU=32
  
 echo "Kører fra: $BASE_DIR"
 echo ""
